@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Edit</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h1 class="text-center">Edit</h1>
+      <form action="/dictionary/<%=data._id%>?_method=PUT" method="POST">
+        <h4>Word</h4>
+        <input
+          class="form-control"
+          type="text"
+          name="word"
+          value="<%=data.word%>"
+        />
+        <br />
+        <h4>Definition</h4>
+        <input
+          class="form-control"
+          type="text"
+          name="definition"
+          value="<%=data.definition%>"
+        /><br />
+        <h4>Related</h4>
+        <input
+          class="form-control"
+          type="text"
+          name="tags"
+          value="<%=data.tags%>"
+        /><br />
+        <input
+          class="form-control btn btn-success"
+          type="submit"
+          value="submit changes"
+        /><br />
+      </form>
+    </div>
+  </body>
+</html>

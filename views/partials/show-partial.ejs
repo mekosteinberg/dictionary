@@ -1,0 +1,15 @@
+<h1><%=data.word%></h1>
+
+<a href="/dictionary"><button class="btn btn-primary">Back</button></a>
+<a href="/dictionary/<%=data.id%>/edit"
+  ><button class="btn btn-primary">Edit</button></a
+>
+
+<ul>
+  <li class="details"><%=data.word%></li>
+  <li class="details"><%=data.definition%></li>
+  <li class="details"><%=data.tags%></li>
+</ul>
+<form action="/dictionary/?_method=DELETE" method="POST">
+  <input class="btn btn-danger" type="submit" value="Delete" />
+</form>

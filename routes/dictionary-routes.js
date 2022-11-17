@@ -48,6 +48,13 @@ router.post("/", (req, res) => {
   });
 });
 
+//SEED
+// router.get("/seed", (req, res) => {
+//   dictionarySchema.create(dictionarySeed, (err, data) => {
+//     res.send(data);
+//   });
+// });
+
 //SHOW
 router.get("/:id", (req, res) => {
   dictionarySchema.findById(req.params.id, (err, foundData) => {
@@ -80,11 +87,5 @@ router.delete("/:id", (req, res) => {
   });
 });
 
-//SEED
-// router.get("/seed", (req, res) => {
-//   dictionarySchema.create(dictionarySeed, (err, data) => {
-//     res.send(data);
-//   });
-// });
 
 module.exports = router;
